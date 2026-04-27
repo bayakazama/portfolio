@@ -1,5 +1,16 @@
 {
 	"name": "portfolio",
 	"compatibility_date": "2025-10-08",
-	"pages_build_output_dir": "./dist"
+	"main": "@astrojs/cloudflare/entrypoints/server",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist"
+	},
+	"observability": {
+		"enabled": true
+	}
 }
