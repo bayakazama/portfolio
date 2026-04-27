@@ -1,39 +1,8 @@
 ---
 import Layout from "@/layouts/main.astro"
-import { Button } from "@/components/ui/button"
+import HeroSection from "@/components/HeroSection.astro"
 ---
 
 <Layout>
-  <section class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center md:py-24">
-    <div class="space-y-6">
-      <p class="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-        Designed for performance
-      </p>
-      <h1 class="text-4xl leading-tight font-bold tracking-tight md:text-5xl">
-        Build faster with Grimsmo.
-      </h1>
-      <p class="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-        A clean, developer-first foundation for shipping polished web experiences.
-        Lightweight components, sharp defaults, and a workflow that stays out of your way.
-      </p>
-
-      <div class="flex flex-wrap items-center gap-2">
-        <Button asChild>
-          <a href="#get-started">Get started</a>
-        </Button>
-        <Button asChild variant="ghost">
-          <a href="#projects">View projects</a>
-        </Button>
-      </div>
-    </div>
-
-    <div class="overflow-hidden">
-      <img
-        src="/htph.png"
-        alt="Grimsmo hero preview"
-        class="h-full w-full object-cover"
-        loading="eager"
-      />
-    </div>
-  </section>
+  <HeroSection />
 </Layout>
