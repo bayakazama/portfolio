@@ -16,108 +16,75 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import { cn } from "@/lib/utils"
-
 import { ModeToggle } from '@/components/ModeToggle';
 
-type NavbarClientProps = {
-    pathname: string
-}
+type NavbarClientProps = {}
 
 const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Projects", href: "projects" },
-    { label: "About", href: "about" },
-    { label: "Contact", href: "contact" },
+    { label: "Home", href: "#home" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
 ]
 
-function isActive(pathname: string, href: string) {
-    if (href === "/") {
-        return pathname === "/"
-    }
-
-    return pathname.startsWith(href)
-}
-
-export function NavbarClient({ pathname }: NavbarClientProps) {
+export function NavbarClient({ }: NavbarClientProps) {
     return (
-        <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+        <header className="sticky top-0 z-40 border-neutral-800/30 bg-neutral-950/20 backdrop-blur-md supports-[backdrop-filter]:bg-neutral-950/20">
             <nav
                 className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4"
                 aria-label="Main navigation"
             >
-                <a href="/" className="inline-flex items-center gap-2">
-                    <span className="inline-flex size-7 items-center justify-center border bg-muted text-[10px] font-semibold tracking-widest text-muted-foreground">
-                        G
-                    </span>
-                    <span className="text-sm font-semibold tracking-tight">Grimsmo</span>
+                <a href="#home" className="inline-flex items-center gap-2.5 hover:opacity-80 transition-opacity">
+                    <span className="text-xl font-light tracking-tight text-neutral-200">Grimsmo</span>
                 </a>
 
-                <div className="hidden items-center gap-6 md:flex">
+                <div className="hidden items-center gap-8 md:flex">
                     <NavigationMenu viewport={false}>
-                        <NavigationMenuList>
-                            {navItems.map((item) => {
-                                const active = isActive(pathname, item.href)
-
-                                return (
-                                    <NavigationMenuItem key={item.href}>
-                                        <NavigationMenuLink
-                                            href={item.href}
-                                            aria-current={active ? "page" : undefined}
-                                            className={cn(
-                                                navigationMenuTriggerStyle(),
-                                                active && "bg-muted text-foreground"
-                                            )}
-                                        >
-                                            {item.label}
-                                        </NavigationMenuLink>
-                                    </NavigationMenuItem>
-                                )
-                            })}
+                        <NavigationMenuList className="gap-2">
+                            {navItems.map((item) => (
+                                <NavigationMenuItem key={item.href}>
+                                    <NavigationMenuLink
+                                        href={item.href}
+                                        className={`${navigationMenuTriggerStyle()} text-xl font-light text-neutral-300/80 hover:text-neutral-200 transition-colors`}
+                                    >
+                                        {item.label}
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            ))}
                         </NavigationMenuList>
                     </NavigationMenu>
 
-                    <div className="flex items-center gap-2">
-                        <ModeToggle />
-                    </div>
+
                 </div>
 
-                <div className="md:hidden">
+                <div className="flex md:hidden gap-2 items-center">
                     <ModeToggle />
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon-sm" aria-label="Open menu">
-                                <MenuIcon />
+                                <MenuIcon className="h-5 w-5" />
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="left" className="w-[84vw] max-w-sm">
+                        <SheetContent side="right" className="w-[60vw] max-w-[18rem] sm:max-w-[20rem] max-h-[35vh] bg-gradient-to-br from-amber-950/90 to-amber-900/80 border border-white/70 shadow-2xl rounded-l-2xl">
                             <SheetHeader>
-                                <SheetTitle>Navigation</SheetTitle>
-                                <SheetDescription>
-                                    Browse the main sections and account actions.
+                                <SheetTitle className="text-lg text-amber-100 font-light">Navigation</SheetTitle>
+                                <SheetDescription className="text-base text-amber-200/70 font-light">
+                                    Navigate through my portfolio!
                                 </SheetDescription>
                             </SheetHeader>
 
-                            <div className="flex flex-col gap-1 px-4 pb-4">
-                                {navItems.map((item) => {
-                                    const active = isActive(pathname, item.href)
-
-                                    return (
-                                        <Button
-                                            key={item.href}
-                                            asChild
-                                            variant="ghost"
-                                            className={cn(
-                                                "justify-start",
-                                                active && "bg-muted text-foreground"
-                                            )}
-                                        >
-                                            <a href={item.href} aria-current={active ? "page" : undefined}>
-                                                {item.label}
-                                            </a>
-                                        </Button>
-                                    )
-                                })}
+                            <div className="flex flex-col gap-2 px-4 pb-4 mt-6">
+                                {navItems.map((item) => (
+                                    <Button
+                                        key={item.href}
+                                        asChild
+                                        variant="ghost"
+                                        className="justify-start text-base text-amber-100/90 hover:text-amber-50 hover:bg-amber-900/40 font-light"
+                                    >
+                                        <a href={item.href}>
+                                            {item.label}
+                                        </a>
+                                    </Button>
+                                ))}
                             </div>
                         </SheetContent>
                     </Sheet>

@@ -2,35 +2,51 @@
 import { Button } from "@/components/ui/button"
 ---
   
-  <section class="grid w-full max-w-6xl gap-10 md:grid-cols-2 md:items-center">
-    <div class="space-y-6">
-      <p class="text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
-        Designed for performance
-      </p>
-      <h1 class="text-4xl leading-tight font-bold tracking-tight md:text-5xl">
-        Build faster with Grimsmo.
-      </h1>
-      <p class="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-        A clean, developer-first foundation for shipping polished web experiences.
-        Lightweight components, sharp defaults, and a workflow that stays out of your way.
+<section id="home" class="w-full py-20 sm:py-28 lg:py-32 overflow-hidden relative">
+  <div class="mx-auto grid max-w-6xl gap-12 sm:gap-16 px-4 md:grid-cols-2 md:items-start relative z-10">
+    <div class="space-y-8 animate-fadeInUp">
+      <div class="space-y-4">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-light tracking-tighter text-amber-50 leading-tight">Gustav Grimsmo Øines</h1>
+      </div>
+      <p class="max-w-lg text-base sm:text-lg leading-relaxed text-amber-100/80 font-light">
+        Hi, I'm a developer from Molde, Norway. I love building websites that i can be proud of, and that will have a positive impact for people. I am eager to learn new technologies and improve my skills, and I'm always looking for new challenges and opportunities to grow as a developer.
       </p>
 
-      <div class="flex flex-wrap items-center gap-2">
-        <Button asChild>
-          <a href="#get-started">Get started</a>
-        </Button>
-        <Button asChild variant="ghost">
-          <a href="#projects">View projects</a>
-        </Button>
+      <p class="max-w-lg text-base sm:text-lg leading-relaxed text-amber-100/80 font-light">
+        please feel free to explore my projects and my portfolio, dont hesitate to reach out if you have any questions or if you want to collaborate on a project.
+      </p>
+
+      <div class="pt-12">
+        <p class="text-lg font-light tracking-widest text-amber-700/60 uppercase mb-6">Tech Stack</p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="https://react.dev/learn" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">React</a>
+          <a href="https://www.typescriptlang.org" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">TypeScript</a>
+          <a href="https://nodejs.org" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">Node.js</a>
+          <a href="https://www.mongodb.com" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">MongoDB</a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">JavaScript</a>
+          <a href="https://restfulapi.net" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">REST API</a>
+          <a href="https://bun.sh" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">Bun</a>
+          <a href="https://astro.build" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">Astro</a>
+          <a href="https://svelte.dev" target="_blank" rel="noreferrer" class="px-4 py-2 text-sm font-light text-white border border-amber-700/60 rounded-lg hover:border-amber-600 hover:scale-110 transition-all duration-300">Svelte</a>
+        </div>
       </div>
     </div>
 
-    <div class="overflow-hidden">
-      <img
-        src="/htph.png"
-        alt="Grimsmo hero preview"
-        class="h-full w-full object-cover"
-        loading="eager"
-      />
+    <div class="relative group order-first md:order-last md:ml-12 md:mt-8">
+      <!-- Terracotta glow effect behind (outside overflow) -->
+      <div class="absolute -inset-6 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(184, 92, 56, 0.4) 0%, rgba(184, 92, 56, 0.15) 40%, transparent 100%); z-index: -1;"></div>
+      
+      <!-- Image container with cinematic scale effect -->
+      <div class="overflow-hidden relative h-64 w-64 sm:h-80 sm:w-80 md:h-96 md:w-96 rounded-full shadow-2xl">
+        <img
+          src="/self-portrait.jpg"
+          alt="Portfolio preview"
+          class="h-full w-full object-cover group-hover:scale-105 duration-700 ease-out filter brightness-100 contrast-110"
+          loading="eager"
+        />
+        <!-- Subtle warm overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-amber-950/30 via-transparent to-transparent opacity-50"></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>

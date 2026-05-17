@@ -29,10 +29,16 @@ import Navbar from "../components/Navbar.astro"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Grimsmo</title>
   </head>
-  <body>
-    <Navbar />
-    <div class="w-full max-w-6xl mx-auto flex min-h-sv px-4">
-      <slot />
+  <body class="relative">
+    <!-- Professional warm-toned background -->
+    <div class="fixed inset-0 bg-gradient-warm" style="z-index: 0;"></div>
+    <div class="fixed inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" style="z-index: 1;"></div>
+    
+    <div class="relative z-20">
+      <Navbar />
+      <main class="w-full">
+        <slot />
+      </main>
     </div>
   </body>
 </html>

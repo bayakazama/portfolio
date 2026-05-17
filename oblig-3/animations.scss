@@ -1,0 +1,163 @@
+// keyframes for the animated elements
+@keyframes floatingCan {
+    0%, 100% {
+      transform: translateY(50%) rotate(-20deg);
+    }
+    50% {
+      transform: translateY(0) rotate(-40deg);
+    }
+  }
+
+  @keyframes floatingBottle{
+    0%, 100%{
+      transform: translateY(60%) rotate(20deg);
+    }
+    50%{
+      transform: translateY(0) rotate(30deg);
+    }
+  }
+
+  @keyframes bobbing {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-10px) rotate(-3deg);
+      }
+      50% {
+        transform: translateY(0) rotate(0deg);
+      }
+      75% {
+        transform: translateY(-10px) rotate(3deg);
+      }
+    }
+    
+      // the keyframe to fade in elements
+      @keyframes fadeIn{
+        0% {
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+      }
+      
+      @keyframes slideUp {
+          0%{
+            transform: translateY(100%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+          }
+
+          @keyframes swimAnimation {
+            0%{
+                transform: translateX(1200%);
+            }
+            100%{
+                transform: translateX(-500%);
+            }
+        }
+    
+        // keyframe to make Carlos walk out of the store
+        @keyframes walkDistance {
+            0% {
+              transform: translateX(0) scaleX(-1);
+            }
+            100% {
+              transform: translateX(-370%) scaleX(-1);
+            }
+          }
+          // makes the truck drive to the factory
+          @keyframes driveDistance{
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-250%)
+            }
+          }
+          // for the bubble elements
+          @keyframes fadeInAndRise {
+            0% {
+                opacity: 0;
+                transform: translateY(300%);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(150%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+          }
+          // makes the angler fish to swim into frame
+          @keyframes swimDistance{
+            0% {
+                opacity: 0;
+                transform: translateX(0);
+            }
+            50%{
+              opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%)
+            }
+        }
+        // throws the plastic bag off the boat
+        @keyframes plasticThrow {
+            0% {
+              transform: translateY(0);
+            }
+          1%{
+            opacity: 1;
+          }
+            80% {
+              opacity: 0;
+            }
+            
+              100% {
+              transform: translateY(50%) scale(0);
+            }
+          }
+          // adds interactivity to the seagull over the store
+          @keyframes spin {
+            from {
+              transform: rotate(0deg);
+            } to {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes moveS {
+            0% {
+              transform: translateY(0) translateX(0);
+              opacity: 0;
+            }
+            20% {
+              transform: translateY(30vh) translateX(5vw) rotate(10deg);
+              opacity: 1;
+            }
+            40% {
+              transform: translateY(50vh) translateX(10vw) rotate(20deg);
+              opacity: 1;
+            }
+            60% {
+              transform: translateY(70vh) translateX(6vw) rotate(30deg);
+              opacity: 1;
+            }
+            80% {
+              transform: translateY(90vh) translateX(2vw) rotate(30deg);
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(100vh) translateX(-2vw) rotate(30deg);
+              opacity: 0;
+            }
+          }
+          
+          
+          

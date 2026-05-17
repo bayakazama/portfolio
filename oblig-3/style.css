@@ -1,0 +1,672 @@
+@keyframes floatingCan {
+  0%, 100% {
+    transform: translateY(50%) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(-40deg);
+  }
+}
+@keyframes floatingBottle {
+  0%, 100% {
+    transform: translateY(60%) rotate(20deg);
+  }
+  50% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes swimAnimation {
+  0% {
+    transform: translateX(1200%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+@keyframes walkDistance {
+  0% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-370%) scaleX(-1);
+  }
+}
+@keyframes driveDistance {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
+@keyframes fadeInAndRise {
+  0% {
+    opacity: 0;
+    transform: translateY(300%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(150%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+@keyframes swimDistance {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}
+@keyframes plasticThrow {
+  0% {
+    transform: translateY(0);
+  }
+  1% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(50%) scale(0);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes moveS {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(30vh) translateX(5vw) rotate(10deg);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(50vh) translateX(10vw) rotate(20deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(70vh) translateX(6vw) rotate(30deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(90vh) translateX(2vw) rotate(30deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(-2vw) rotate(30deg);
+    opacity: 0;
+  }
+}
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, rgb(139, 212, 236) 0%, rgb(30, 154, 228) 50%, #2e3088 63.1%, rgb(0, 0, 0) 90%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  font-size: clamp(1rem, 0.4375rem + 0.0225vw, 3.25rem);
+}
+body .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section {
+  opacity: 0;
+  height: 100vh;
+  transition: 120ms;
+  position: relative;
+}
+body section.show {
+  opacity: 1;
+}
+body #heading {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #heading h1 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.5vw;
+  text-shadow: 10px 10px 20px rgb(22, 22, 129);
+  margin-bottom: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  overflow-wrap: break-word;
+}
+body #heading p {
+  margin-top: 2vw;
+  font-size: 0.7rem;
+}
+body .FirstInfoTags {
+  position: absolute;
+  margin: 0;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  max-width: 10vw;
+  padding: 3vw 2vw;
+  background: rgba(0, 0, 0, 0.999);
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: 1px solid white;
+}
+body .FirstInfoTags.goal14 {
+  opacity: 0;
+  font-size: 1rem;
+}
+body .FirstInfoTags.goal14.fact1 {
+  bottom: 12vw;
+  right: 10vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+body .FirstInfoTags.goal14.fact2 {
+  top: 5vw;
+  right: 13vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+body .FirstInfoTags.goal14.fact3 {
+  top: 5vw;
+  left: 50vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+body .FirstInfoTags.goal14.fact4 {
+  top: 5vw;
+  left: 30vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+body .FirstInfoTags.goal14.fact5 {
+  top: 5vw;
+  right: 10vw;
+  animation-delay: 2s;
+  max-width: 20vw;
+  word-wrap: break-word;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+body .infoTags {
+  position: absolute;
+  margin: 0;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  max-width: 10vw;
+  padding: 3vw 2vw;
+  background: rgba(30, 154, 228, 0.5);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+body .infoTags.plasticBag {
+  opacity: 0;
+  left: 5vw;
+  bottom: 15vw;
+  max-width: 12vw;
+  z-index: 1;
+  animation: fadeIn 3s linear;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+  word-wrap: break-word;
+}
+body .infoTags.callToAction {
+  opacity: 0;
+  right: 2vw;
+  bottom: 10vw;
+  max-width: 14vw;
+  z-index: 1;
+  animation: fadeIn 4s linear;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  word-wrap: break-word;
+}
+body .infoTags.goal14 {
+  opacity: 0;
+  font-size: 1rem;
+}
+body .infoTags.goal14.fact1 {
+  bottom: 12vw;
+  right: 10vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+body .infoTags.goal14.fact2 {
+  top: 5vw;
+  right: 13vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+body .infoTags.goal14.fact3 {
+  top: 5vw;
+  left: 50vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+body .infoTags.goal14.fact4 {
+  top: 5vw;
+  left: 30vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+body .infoTags.goal14.fact5 {
+  top: 5vw;
+  right: 10vw;
+  animation-delay: 2s;
+  max-width: 20vw;
+  word-wrap: break-word;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+body .infoTags.goal14.nr1 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 3vw 5vw;
+  padding-left: 3vw;
+  left: 2vw;
+  top: 5vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  max-width: 20vw;
+  word-wrap: break-word;
+}
+body .infoTags.goal14.nr2 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: 2vw;
+  right: 5vw;
+  bottom: 1vw;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  max-width: 18vw;
+  word-wrap: break-word;
+}
+body .infoTags.goal14.nr3 {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  top: 20vw;
+  left: 5vw;
+  word-wrap: break-word;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  max-width: 20vw;
+}
+@media (max-width: 1099px) {
+  body .infoTags.goal14.nr3 {
+    padding: 2vw;
+    left: auto;
+    right: 1vw;
+    top: 5vw;
+    animation: fadeIn 2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    max-width: 18vw;
+    word-wrap: break-word;
+  }
+  body .infoTags.goal14.nr2 {
+    padding: 2vw;
+    left: 2vw;
+    bottom: 1vw;
+    animation: fadeIn 2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    max-width: 25vw;
+    word-wrap: break-word;
+  }
+}
+body .UNgoal14 {
+  position: absolute;
+  width: 5vw;
+  top: 9vw;
+  left: 19.5vw;
+  opacity: 0;
+  animation: fadeIn 2s linear;
+  animation-fill-mode: forwards;
+}
+body .bubble {
+  position: absolute;
+  opacity: 0.4;
+}
+body .bubble.one {
+  right: 20vw;
+  width: 7vw;
+  top: 5vw;
+  animation: fadeInAndRise 6s linear forwards infinite;
+}
+body .bubble.two {
+  right: 10vw;
+  width: 5vw;
+  top: 10vw;
+  animation: fadeInAndRise 7s linear forwards infinite;
+}
+body .bubble.three {
+  left: 20vw;
+  width: 7vw;
+  top: 10vw;
+  animation: fadeInAndRise 8s linear forwards infinite;
+}
+body .bubble.fore {
+  right: 55vw;
+  width: 5vw;
+  top: 7vw;
+  animation: fadeInAndRise 8s linear forwards infinite;
+}
+body .fish {
+  position: absolute;
+  width: 8vw;
+  animation: swimAnimation 12s forwards linear infinite;
+}
+body .fish.one {
+  bottom: 35vw;
+  left: 30vw;
+  opacity: 0.5;
+}
+body .fish.two {
+  bottom: 30vw;
+  left: 23vw;
+  opacity: 0.5;
+}
+body .fish.three {
+  bottom: 25vw;
+  left: 15vw;
+  opacity: 0.3;
+}
+body .fish.four {
+  bottom: 20vw;
+  left: 10vw;
+  opacity: 0.5;
+}
+body .fish.five {
+  bottom: 22vw;
+  left: 20vw;
+  opacity: 0.6;
+}
+body .fish.six {
+  bottom: 15vw;
+  left: 30vw;
+  opacity: 0.8;
+}
+body .fish.seven {
+  bottom: 5vw;
+  left: 25vw;
+  opacity: 0.4;
+}
+@media (prefers-reduced-motion: reduce) {
+  body .fish {
+    animation-duration: 40s;
+  }
+}
+body .guy {
+  animation: walkDistance 8s forwards linear;
+  transform: scaleX(-1);
+}
+body .svg__factory {
+  position: absolute;
+  width: 33vw;
+  bottom: 0;
+}
+body .svg__SinkingPlastic {
+  opacity: 0;
+  position: absolute;
+  width: 30vw;
+  top: -10vh;
+  left: 35vw;
+  height: auto;
+  animation: moveS 15S linear;
+  animation-delay: 0s;
+}
+body .svg__PlasticBagTrash {
+  opacity: 0;
+  position: absolute;
+  width: 15VW;
+  bottom: 4vw;
+  right: 21vw;
+  animation: plasticThrow 5s ease-in-out;
+  animation-delay: 8s;
+}
+body .svg__town {
+  position: absolute;
+  width: 33vw;
+  bottom: 0;
+  opacity: 90%;
+}
+body .svg__town-1 {
+  left: 0vw;
+}
+body .svg__town-2 {
+  left: 16vw;
+}
+body .svg__town-3 {
+  left: 32vw;
+}
+body .svg__bottle {
+  position: absolute;
+  right: 20%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingBottle 8s linear infinite;
+  opacity: 0.5;
+}
+body .svg__bottle--two {
+  position: absolute;
+  left: 10%;
+  bottom: 6vw;
+  width: 2vw;
+  animation: floatingCan 6s linear infinite;
+  opacity: 0.6;
+}
+body .svg__soda {
+  position: absolute;
+  left: 30%;
+  bottom: 7vw;
+  width: 2vw;
+  animation: floatingCan 5s linear infinite;
+  opacity: 0.8;
+}
+body .svg__jojamart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40vw;
+}
+body .svg__carlos {
+  position: absolute;
+  right: 9.6vw;
+  bottom: 0;
+  width: 4vw;
+}
+body .svg__jojadoor {
+  position: absolute;
+  bottom: 0;
+  right: 9.4vw;
+  width: 4.74vw;
+}
+body .svg__trashbin {
+  position: absolute;
+  bottom: 0;
+  left: 66vw;
+  width: 5vw;
+}
+body .svg__recyclebin {
+  position: absolute;
+  bottom: 0;
+  left: 58vw;
+  width: 5vw;
+}
+body .svg__storegull {
+  position: absolute;
+  top: 5vw;
+  left: 45vw;
+  width: 10vw;
+}
+body .svg__storegull:hover {
+  animation: spin 0.4s linear infinite;
+}
+body .svg__jojabag--boat {
+  position: absolute;
+  right: 40%;
+  bottom: 0;
+  width: 20vw;
+}
+body .svg__truck {
+  position: absolute;
+  bottom: 0;
+  width: 30vw;
+  animation: driveDistance 8s linear;
+  animation-fill-mode: forwards;
+  right: -30vw;
+}
+body .svg__trench {
+  position: absolute;
+  width: 30vw;
+  height: auto;
+  animation: slideUp 4s linear;
+  bottom: 0;
+  opacity: 1;
+}
+body .svg__trench-one {
+  left: 0;
+}
+body .svg__trench-two {
+  right: 0;
+}
+body .svg__anglerFish {
+  opacity: 0;
+  position: absolute;
+  width: 20vw;
+  bottom: 10vw;
+  right: 15vw;
+  animation: swimDistance 6s linear;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+body .svg__bottomPlasticBag {
+  position: absolute;
+  width: 30vw;
+  bottom: 15vw;
+  left: 30vw;
+  animation: floatingBottle 8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  body .svg__bottomPlasticBag {
+    animation-duration: 34s;
+  }
+}
+body .svg__waves {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2vw;
+  left: 0;
+}
+body .svg__waves--two {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+body .svg__boat {
+  position: absolute;
+  width: 30vw;
+  bottom: 10vw;
+  animation: bobbing 4s ease-in-out infinite;
+  left: 30vw;
+}
+
+.hidden {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+@media screen and (orientation: portrait) {
+  body::before {
+    content: "Please rotate your device for the best viewing experience";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+  }
+}
+.cta-button {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(30, 154, 228, 0.8);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  bottom: 2vw;
+  right: 2vw;
+  max-width: 25vw;
+  padding: 2vw 2vw;
+  cursor: pointer;
+  border-radius: 5%;
+  z-index: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  background: linear-gradient(to bottom, rgba(39, 170, 246, 0.8), rgba(10, 105, 160, 0.5));
+  border: 2px solid white;
+  animation: fadeIn 4s linear;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+.cta-button:hover {
+  background-color: rgb(30, 154, 228);
+}/*# sourceMappingURL=style.css.map */

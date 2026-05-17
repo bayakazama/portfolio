@@ -7,6 +7,7 @@
       "dependencies": {
         "@astrojs/cloudflare": "^13.2.1",
         "@astrojs/react": "^5.0.4",
+        "@firecms/neat": "^0.8.0",
         "@fontsource-variable/geist": "^5.2.8",
         "@fontsource-variable/jetbrains-mono": "^5.2.8",
         "astro": "^6.1.9",
@@ -188,6 +189,8 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.27.3", "", { "os": "win32", "cpu": "ia32" }, "sha512-QLKSFeXNS8+tHW7tZpMtjlNb7HKau0QDpwm49u0vUp9y1WOF+PEzkU84y9GqYaAVW8aH8f3GcBck26jh54cX4Q=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.27.3", "", { "os": "win32", "cpu": "x64" }, "sha512-4uJGhsxuptu3OcpVAzli+/gWusVGwZZHTlS63hh++ehExkVT8SgiEf7/uC/PclrPPkLhZqGgCTjd0VWLo6xMqA=="],
+
+    "@firecms/neat": ["@firecms/neat@0.8.0", "", {}, "sha512-gwvYd63voJa+ZtEt6SW3toJwVx9smisKuXE7vsXvZtlGPzsWpR1lzaltIsijuPkg8Qj/ybS2tEdsttWE7g2KsA=="],
 
     "@floating-ui/core": ["@floating-ui/core@1.7.5", "", { "dependencies": { "@floating-ui/utils": "^0.2.11" } }, "sha512-1Ih4WTWyw0+lKyFMcBHGbb5U5FtuHJuujoyyr5zTaWS5EYMeT6Jb2AuDeftsCsEuchO+mM2ij5+q9crhydzLhQ=="],
 

@@ -17,6 +17,7 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "^13.2.1",
 		"@astrojs/react": "^5.0.4",
+		"@firecms/neat": "^0.8.0",
 		"@fontsource-variable/geist": "^5.2.8",
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
 		"astro": "^6.1.9",

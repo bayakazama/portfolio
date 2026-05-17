@@ -1,0 +1,610 @@
+@use "animations.scss";
+// variables for our colors
+$sky: rgb(139, 212, 236);
+$backgroundBlue: rgb(30, 154, 228);
+$darkBlue: rgb(22, 22, 129);
+$darkestDeep: rgb(0,0,0);
+$white: #FFFFFF;
+$yellow:#fcee21;
+$onGreen: #2DC770;
+$seaBlue: #2e3088;
+
+
+// adds the gradient background to the entire page
+body{
+    margin: 0;
+    background: linear-gradient(to bottom, 
+    $sky 0%,        
+    $backgroundBlue 50%,       
+    $seaBlue 63.1%,       
+    $darkestDeep 90%); 
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white;
+    font-size: clamp(1rem, calc(0.4375rem + 0.0225vw), 3.25rem);
+ 
+    // adds a container to the sections
+.section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    // makes each section element relative and allows the intersection observer to target one section at a time
+section {
+    opacity: 0;
+    height: 100vh;
+    transition: 120ms;
+    position: relative;
+    // reveals the section when it's inside the viewport by restoring the opacity
+    &.show {
+        opacity: 1;
+    }
+}
+        
+    #heading{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 0.5vw;
+            text-shadow: 10px 10px 20px $darkBlue;
+            margin-bottom: 0;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            overflow-wrap: break-word;
+        }
+        p {
+            margin-top: 2vw;
+            font-size: 0.7rem;
+        }
+    }
+    // adds basic layout and styling for all the info text
+    .FirstInfoTags{
+        position: absolute;
+        margin: 0;
+        font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+        max-width: 10vw;
+        padding: 3vw 2vw;
+        background: rgba(0, 0, 0, 0.999); 
+        font-weight: bold;
+        font-size: 1.5rem;
+        border: 1px solid white;
+
+        &.goal14{
+            opacity: 0;
+              font-size: 1rem;
+        &.fact1{
+            bottom: 12vw;
+            right: 10vw;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 8s;
+        }
+
+        &.fact2{
+            top: 5vw;
+            right: 13vw;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 4s;
+          }
+          &.fact3{
+            top: 5vw;
+            left: 50vw;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 2s; 
+          }
+          &.fact4{
+            top: 5vw;
+            left: 30vw;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+          }
+
+          &.fact5{
+            top: 5vw;
+            right: 10vw;
+            animation-delay: 2s; 
+            max-width: 20vw;
+            word-wrap: break-word;
+            animation: fadeIn 2s linear;
+            animation-fill-mode: forwards;
+          }
+    }
+    }
+    .infoTags{
+        position: absolute;
+        margin: 0;
+        font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+        max-width: 10vw;
+        padding: 3vw 2vw;
+        background: rgb(30, 154, 228, 0.5); 
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        &.plasticBag{
+            opacity: 0;
+            left: 5vw;
+            bottom: 15vw;
+            max-width: 12vw;
+            z-index: 1;
+            animation: fadeIn 3s linear;
+            animation-delay: 4s;
+            animation-fill-mode: forwards;
+            word-wrap: break-word;
+        }
+
+        &.callToAction{
+            opacity: 0;
+            right: 2vw;
+            bottom: 10vw;
+            max-width: 14vw;
+            z-index: 1;
+            animation: fadeIn 4s linear;
+            animation-delay: 5s;
+            animation-fill-mode: forwards;
+            word-wrap: break-word;
+        }
+
+        &.goal14{
+          opacity: 0;
+            font-size: 1rem;
+
+            &.fact1{
+              bottom: 12vw;
+              right: 10vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
+              animation-delay: 8s;
+            }
+            &.fact2{
+              top: 5vw;
+              right: 13vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
+              animation-delay: 4s;
+            }
+            &.fact3{
+              top: 5vw;
+              left: 50vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
+              animation-delay: 2s; 
+            }
+            &.fact4{
+              top: 5vw;
+              left: 30vw;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
+            }
+
+            &.fact5{
+              top: 5vw;
+              right: 10vw;
+              animation-delay: 2s; 
+              max-width: 20vw;
+              word-wrap: break-word;
+              animation: fadeIn 2s linear;
+              animation-fill-mode: forwards;
+            }
+
+            &.nr1{
+                font-size: clamp(1rem, 2vw, 1.2rem);
+                padding: 3vw 5vw;
+                padding-left: 3vw;
+                left: 2vw;
+                top: 5vw;      
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                max-width: 20vw;
+                word-wrap: break-word;
+            }
+            &.nr2{
+                font-size: clamp(1rem, 2vw, 1.2rem);
+                padding: 2vw;
+                right: 5vw;
+                bottom: 1vw;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 4s;
+                max-width: 18vw;
+                word-wrap: break-word;
+            }
+            &.nr3{
+                font-size: clamp(1rem, 2vw, 1.2rem);
+                top: 20vw;
+                left: 5vw;
+                word-wrap: break-word;
+                animation: fadeIn 2s linear;
+                animation-fill-mode: forwards;
+                animation-delay: 2s;
+                max-width: 20vw;
+            }
+            @media (max-width: 1099px) {
+                &.nr3{
+
+                    padding: 2vw;
+                    left:auto;
+                    right: 1vw;
+                    top: 5vw;
+                    animation: fadeIn 2s linear;
+                    animation-fill-mode: forwards;
+                    animation-delay: 2s;
+                    max-width: 18vw;
+                    word-wrap: break-word;
+                }
+                &.nr2{
+                    padding: 2vw;
+                    left: 2vw;
+                    bottom: 1vw;
+                    animation: fadeIn 2s linear;
+                    animation-fill-mode: forwards;
+                    animation-delay: 4s;
+                    max-width: 25vw;
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+
+    .UNgoal14{
+        position: absolute;
+        width: 5vw;
+        top: 9vw;
+        left: 19.5vw;
+        opacity: 0;
+        animation: fadeIn 2s linear;
+        animation-fill-mode: forwards;
+    }
+    // bubbles for the underwater section
+    .bubble {
+        position: absolute;
+        opacity: 0.4;
+    
+        &.one {
+            right: 20vw;
+            width: 7vw;
+            top: 5vw;
+            animation: fadeInAndRise 6s linear forwards infinite;
+        }
+        &.two {
+            right: 10vw;
+            width: 5vw;
+            top: 10vw;
+            animation: fadeInAndRise 7s linear forwards infinite;
+        }
+
+        &.three {
+            left: 20vw;
+            width: 7vw;
+            top: 10vw;
+            animation: fadeInAndRise 8s linear forwards infinite;
+        }
+
+        &.fore{
+            right: 55vw;
+            width: 5vw;
+            top: 7vw;
+            animation: fadeInAndRise 8s linear forwards infinite;
+        }
+    
+    }
+
+    // fish for the underwater section
+    .fish{
+        position: absolute;
+        width: 8vw; 
+        animation: swimAnimation 12s forwards linear infinite;
+
+        &.one{
+            bottom: 35vw;
+            left: 30vw;
+            opacity: 0.5;
+        }
+        &.two{
+            bottom: 30vw;
+            left: 23vw;
+            opacity: 0.5;
+        }
+        &.three{
+            bottom: 25vw;
+            left: 15vw;
+            opacity: 0.3;
+        }
+        &.four{
+            bottom: 20vw;
+            left: 10vw;
+            opacity: 0.5;
+        }
+        &.five{
+            bottom: 22vw;
+            left: 20vw;
+            opacity: 0.6;
+        }
+        &.six{
+            bottom: 15vw;
+            left: 30vw;
+            opacity: 0.8;
+        }
+        &.seven{
+            bottom: 5vw;
+            left: 25vw;
+            opacity: 0.4;
+        }
+    }
+    // adds the option to reduce the motion of the fish if user has accessibility settings enabled
+    @media (prefers-reduced-motion: reduce) {
+      .fish {
+          animation-duration: 40s;
+      }
+  }
+      // makes Carlos walk
+      .guy {
+          animation: walkDistance 8s forwards linear;
+          transform: scaleX(-1);
+      }
+
+      // nest for all the SVGs
+    .svg{
+      &__factory{
+        position: absolute;
+        width: 33vw;
+        bottom: 0;
+      }
+
+      &__SinkingPlastic{
+        opacity: 0;
+        position: absolute;
+        width: 30vw;
+        top: -10vh;
+        left: 35vw;
+        height: auto;
+        animation: moveS 15S linear;
+        animation-delay: 0s;
+      }
+
+      &__PlasticBagTrash{
+        opacity: 0;
+        position: absolute;
+        width: 15VW;
+        bottom: 4vw;
+        right: 21vw;
+        animation: plasticThrow 5s ease-in-out;
+        animation-delay: 8s;
+      }
+
+        &__town{
+            position: absolute;
+            width: 33vw;
+            bottom: 0;
+            opacity: 90%;
+            &-1 {
+                left: 0vw;
+            }
+
+            &-2 {
+                left: 16vw;
+            }
+
+            &-3{
+                left: 32vw;
+            }
+        }
+
+        &__bottle{
+          position: absolute;
+          right: 20%;
+          bottom: 7vw;
+          width: 2vw;
+          animation: floatingBottle 8s linear infinite;
+          opacity: 0.5;
+
+          &--two{
+            position: absolute;
+            left: 10%;
+            bottom: 6vw;
+            width: 2vw;
+            animation: floatingCan 6s linear infinite;
+            opacity: 0.6;
+          }
+        }
+
+        &__soda{
+          position: absolute;
+          left: 30%;
+          bottom: 7vw;
+          width: 2vw;
+          animation: floatingCan 5s linear infinite;
+          opacity: 0.8;
+        }
+        
+        &__jojamart {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40vw;
+        }
+
+        &__carlos {
+            position: absolute;
+            right: 9.6vw;
+            bottom: 0;
+            width: 4vw;
+            
+        }
+
+        &__jojadoor {
+            position: absolute;
+            bottom: 0;
+            right: 9.4vw;
+            width: 4.74vw;
+        }
+
+        &__trashbin {
+            position: absolute;
+            bottom: 0;
+            left: 66vw;
+            width: 5vw;
+        }
+
+        &__recyclebin {
+            position: absolute;
+            bottom: 0;
+            left: 58vw;
+            width: 5vw;
+        }
+
+        &__storegull {
+            position: absolute;
+            top: 5vw;
+            left: 45vw;
+            width: 10vw;
+            
+            &:hover {
+                animation: spin 0.4s linear infinite;
+            }
+        }
+
+        &__jojabag {
+
+          &--boat{
+            position: absolute;
+            right: 40%;
+            bottom: 0;
+            width: 20vw;
+          }
+        }
+        
+        &__truck {
+          position: absolute;
+          bottom: 0;
+          width: 30vw;
+          animation: driveDistance 8s linear;
+          animation-fill-mode: forwards;
+          right: -30vw;
+      }
+
+        &__trench{
+            position: absolute;
+            width: 30vw;
+            height: auto;
+            animation: slideUp 4s linear;
+            bottom: 0;
+            opacity: 1;
+
+            &-one{
+                left: 0;
+            }
+
+            &-two{
+                right: 0;
+              }
+
+          }
+
+          &__anglerFish{
+            opacity: 0;
+            position: absolute;
+            width: 20vw;
+            bottom: 10vw;
+            right: 15vw;
+            animation: swimDistance 6s linear;
+            animation-fill-mode: forwards;
+            animation-delay: 5s;
+          }
+
+          &__bottomPlasticBag{
+            position: absolute;
+            width: 30vw;
+            bottom:15vw;
+            left: 30vw;
+            animation: floatingBottle 8s linear infinite;
+          }
+
+          @media (prefers-reduced-motion: reduce) {
+            &__bottomPlasticBag {
+                animation-duration: 34s;
+            }
+          }
+         &__waves{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            bottom: 2vw;
+            left: 0;
+
+            &--two{
+              position: absolute;
+              width: 100%;
+              bottom: 0;
+              left: 0;
+            } 
+         }
+         &__boat{
+          position: absolute;
+          width: 30vw;
+          bottom: 10vw;
+          animation: bobbing 4s ease-in-out infinite;
+          left: 30vw;
+         }
+         
+      }
+
+    }
+
+// hides scrollbars for elements that begin their animation off page
+.hidden{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+// urges the user to use horizontal viewport for the page on smaller devices
+@media screen and (orientation: portrait) {
+    body::before {
+        content: "Please rotate your device for the best viewing experience";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        color: white;
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+.cta-button {
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(30, 154, 228, 0.8);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    bottom: 2vw;
+    right: 2vw;
+    max-width: 25vw;
+    padding: 2vw 2vw;
+    cursor: pointer;
+    border-radius: 5%;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+                0 6px 20px rgba(0, 0, 0, 0.19);
+    background: linear-gradient(to bottom, rgba(39, 170, 246, 0.8), rgba(10, 105, 160, 0.5));
+    border: 2px solid white;
+    animation: fadeIn 4s linear;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+.cta-button:hover {
+    background-color: $backgroundBlue;
+}
+

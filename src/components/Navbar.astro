@@ -1,7 +1,5 @@
 ---
 import { NavbarClient } from "@/components/NavbarClient"
-
-const pathname = Astro.url.pathname
 ---
 
-<NavbarClient pathname={pathname} client:load />
+<NavbarClient client:load />
