@@ -57,7 +57,6 @@ export function NavbarClient({ }: NavbarClientProps) {
                 </div>
 
                 <div className="flex md:hidden gap-2 items-center">
-                    <ModeToggle />
                     <Sheet>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon-sm" aria-label="Open menu">

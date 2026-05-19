@@ -163,7 +163,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
             onClick={(event) => event.stopPropagation()}
           >
             <button
-              className="absolute right-3 top-3 z-10 rounded-full border border-white/60 bg-black px-2.5 py-1 text-sm text-white/90 hover:text-white"
+              className="absolute right-3 top-3 z-10 rounded-full border border-white/80 bg-black px-3 py-1.5 text-sm font-medium text-white hover:text-white shadow-lg shadow-black/30"
               onClick={() => setIsVideoOpen(false)}
               aria-label="Close video"
             >
@@ -197,7 +197,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
             onClick={(event) => event.stopPropagation()}
           >
             <button
-              className="absolute right-3 top-3 z-10 rounded-full border border-white/60 bg-black px-2.5 py-1 text-sm text-white hover:text-white"
+              className="absolute right-3 top-3 z-10 rounded-full border border-white/80 bg-black px-3 py-1.5 text-sm font-medium text-white hover:text-white shadow-lg shadow-black/30"
               onClick={() => setIsSlideshowOpen(false)}
               aria-label="Close slideshow"
             >
