@@ -44,7 +44,7 @@ export function NavbarClient({ }: NavbarClientProps) {
                                 <NavigationMenuItem key={item.href}>
                                     <NavigationMenuLink
                                         href={item.href}
-                                        className={`${navigationMenuTriggerStyle()} text-xl font-light text-neutral-300/80 hover:text-neutral-200 transition-colors`}
+                                        className={`${navigationMenuTriggerStyle()} text-xl font-light text-white hover:text-white/90 transition-colors`}
                                     >
                                         {item.label}
                                     </NavigationMenuLink>
