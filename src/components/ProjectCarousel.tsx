@@ -193,7 +193,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
           onClick={() => setIsSlideshowOpen(false)}
         >
           <div
-            className="relative w-full max-w-[98vw] rounded-xl border border-white/60 bg-amber-950/95 p-2 shadow-2xl sm:max-w-5xl sm:p-5"
+            className="relative w-full max-w-[92vw] rounded-xl border border-white/60 bg-amber-950/95 p-3 shadow-2xl sm:max-w-4xl sm:p-5"
             onClick={(event) => event.stopPropagation()}
           >
             <button
@@ -203,7 +203,7 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
             >
               Close
             </button>
-            <div className="relative w-full max-h-[90vh] overflow-hidden rounded-lg bg-black">
+            <div className="relative w-full max-h-[78vh] overflow-hidden rounded-lg bg-black">
               <img
                 src={slideshowImages[slideIndex]}
                 alt={`Project image ${slideIndex + 1}`}
