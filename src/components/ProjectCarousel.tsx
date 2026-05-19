@@ -152,24 +152,24 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
       {isVideoOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-0 sm:p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
           role="dialog"
           aria-modal="true"
           aria-label="Worldly project video"
           onClick={() => setIsVideoOpen(false)}
         >
           <div
-            className="relative h-[100svh] w-full max-w-full rounded-none border border-white/60 bg-amber-950/95 p-0 shadow-2xl sm:h-auto sm:max-w-4xl sm:rounded-xl sm:p-5"
+            className="relative w-full max-w-[98vw] rounded-xl border border-white/60 bg-amber-950/95 p-2 shadow-2xl sm:max-w-4xl sm:p-5"
             onClick={(event) => event.stopPropagation()}
           >
             <button
-              className="absolute right-3 top-3 z-10 rounded-full border border-white/80 bg-black px-3 py-1.5 text-sm font-medium text-white hover:text-white shadow-lg shadow-black/30"
+              className="absolute right-3 top-3 rounded-full border border-white/50 px-2.5 py-1 text-sm text-white/90 hover:text-white"
               onClick={() => setIsVideoOpen(false)}
               aria-label="Close video"
             >
               Close
             </button>
-            <div className="h-[100svh] w-full overflow-hidden bg-black sm:h-auto sm:rounded-lg sm:aspect-video sm:max-h-[90vh]">
+            <div className="aspect-video w-full max-h-[90vh] overflow-hidden rounded-lg bg-black">
               <video
                 src="/Snapchat-1364334733.mp4"
                 className="h-full w-full"
@@ -186,31 +186,31 @@ export default function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
       {isSlideshowOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-0 sm:p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
           role="dialog"
           aria-modal="true"
           aria-label="Project image slideshow"
           onClick={() => setIsSlideshowOpen(false)}
         >
           <div
-            className="relative h-[100svh] w-full max-w-full rounded-none border border-white/60 bg-amber-950/95 p-0 shadow-2xl sm:h-auto sm:max-w-4xl sm:rounded-xl sm:p-5"
+            className="relative w-full max-w-[88vw] rounded-xl border border-white/60 bg-amber-950/95 p-3 shadow-2xl sm:max-w-4xl sm:p-5"
             onClick={(event) => event.stopPropagation()}
           >
             <button
-              className="absolute right-3 top-3 z-10 rounded-full border border-white/80 bg-black px-3 py-1.5 text-sm font-medium text-white hover:text-white shadow-lg shadow-black/30"
+              className="absolute right-3 top-3 z-10 rounded-full border border-white/60 bg-black px-2.5 py-1 text-sm text-white hover:text-white"
               onClick={() => setIsSlideshowOpen(false)}
               aria-label="Close slideshow"
             >
               Close
             </button>
-            <div className="relative h-[100svh] w-full overflow-hidden bg-black sm:h-auto sm:rounded-lg sm:max-h-[70vh]">
+            <div className="relative w-full max-h-[70vh] overflow-hidden rounded-lg bg-black">
               <img
                 src={slideshowImages[slideIndex]}
                 alt={`Project image ${slideIndex + 1}`}
                 className="h-full w-full object-contain"
               />
             </div>
-            <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center justify-center gap-4 text-sm text-amber-100/80 sm:static sm:mt-4 sm:translate-x-0">
+            <div className="mt-4 flex items-center justify-center gap-4 text-sm text-amber-100/80">
               <button
                 className="rounded-full border border-white/60 bg-black/30 p-2 text-white/90 hover:text-white"
                 onClick={handleSlidePrevious}
